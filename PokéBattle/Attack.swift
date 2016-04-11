@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum AttackCategory {
-    case Special, Physical, Status
+enum AttackCategory: Int {
+    case Special = 1, Physical, Status
 }
 
 struct Attack {

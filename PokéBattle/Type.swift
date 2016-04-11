@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum PokémonType {
-    case Bug
+enum PokémonType: Int {
+    case Bug = 1
     case Dark
     case Dragon
     case Electric

@@ -14,6 +14,7 @@ struct PokémonInstance: CustomStringConvertible {
     let nature: Nature
     let IVs: Stats
     let EVs: Stats
+    let attacks: [Attack]
 
     var hitPoints: Double {
         let base = 2 * Double(basePokemon.stats.hitPoints) + Double(IVs.hitPoints) + floor(Double(EVs.hitPoints) / 4.0)
