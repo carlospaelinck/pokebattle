@@ -16,3 +16,16 @@ struct Stats {
     let specialDefense: Int
     let speed: Int
 }
+
+internal var StatsZero: Stats {
+    get {
+        return Stats(
+            hitPoints: 0,
+            attack: 0,
+            defense: 0,
+            specialAttack: 0,
+            specialDefense: 0,
+            speed: 0
+        )
+    }
+}

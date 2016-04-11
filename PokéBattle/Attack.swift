@@ -17,4 +17,5 @@ struct Attack {
     let basePower: Int
     let type: PokémonType
     let category: AttackCategory
+    let learnset: [Int]
 }

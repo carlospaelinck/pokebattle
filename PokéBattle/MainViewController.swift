@@ -8,8 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
-
+class MainViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,12 +23,14 @@ class ViewController: NSViewController {
 
     override func viewWillAppear() {
         super.viewWillAppear()
+        
+        preferredContentSize = NSSize(width: 640, height: 480)
 
         guard let window = view.window else { return }
         window.titlebarAppearsTransparent = true
         window.movableByWindowBackground = true
         window.styleMask = window.styleMask | NSFullSizeContentViewWindowMask
-        window.title = "PokéBattle"
+        window.title = ""
     }
 }
 

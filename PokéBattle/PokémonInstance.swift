@@ -9,12 +9,12 @@
 import Foundation
 
 struct PokémonInstance: CustomStringConvertible {
-    let basePokemon: Pokémon
-    let level: Int
-    let nature: Nature
-    let IVs: Stats
-    let EVs: Stats
-    let attacks: [Attack]
+    var basePokemon: Pokémon
+    var level: Int
+    var nature: Nature
+    var IVs: Stats
+    var EVs: Stats
+    var attacks: [Attack]
 
     var hitPoints: Double {
         let base = 2 * Double(basePokemon.stats.hitPoints) + Double(IVs.hitPoints) + floor(Double(EVs.hitPoints) / 4.0)
