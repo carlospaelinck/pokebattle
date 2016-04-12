@@ -12,6 +12,8 @@ class DataLoaderController {
     var pokémon: [Pokémon] = []
     var attacks: [Attack] = []
     
+    static let SharedInstance = DataLoaderController()
+    
     init() {
         loadPokémonData()
         loadAttackData()

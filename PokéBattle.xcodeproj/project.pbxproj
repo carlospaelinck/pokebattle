@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		290C95621CBC635B002F6264 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290C95611CBC635B002F6264 /* Team.swift */; };
 		290C95651CBC6983002F6264 /* TeamBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290C95641CBC6983002F6264 /* TeamBuilderViewController.swift */; };
+		290C95681CBC7C4E002F6264 /* BuilderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290C95671CBC7C4E002F6264 /* BuilderTableViewCell.swift */; };
 		29BAB7BA1CBBF1E700E6859B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB7B91CBBF1E700E6859B /* AppDelegate.swift */; };
 		29BAB7BC1CBBF1E700E6859B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB7BB1CBBF1E700E6859B /* MainViewController.swift */; };
 		29BAB7BE1CBBF1E700E6859B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29BAB7BD1CBBF1E700E6859B /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		290C95611CBC635B002F6264 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		290C95641CBC6983002F6264 /* TeamBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamBuilderViewController.swift; sourceTree = "<group>"; };
+		290C95671CBC7C4E002F6264 /* BuilderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderTableViewCell.swift; sourceTree = "<group>"; };
 		29BAB7B61CBBF1E700E6859B /* PokéBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PokéBattle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BAB7B91CBBF1E700E6859B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29BAB7BB1CBBF1E700E6859B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		290C95661CBC7C3E002F6264 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				290C95671CBC7C4E002F6264 /* BuilderTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		29BAB7AD1CBBF1E600E6859B = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 		29BAB7B81CBBF1E700E6859B /* PokéBattle */ = {
 			isa = PBXGroup;
 			children = (
+				290C95661CBC7C3E002F6264 /* Views */,
 				290C95631CBC6425002F6264 /* View Controllers */,
 				29BAB7D21CBBF64600E6859B /* Controllers */,
 				29BAB7CF1CBBF4DB00E6859B /* Extensions */,
@@ -229,6 +240,7 @@
 				29BAB7D41CBBF65100E6859B /* BattleController.swift in Sources */,
 				29BAB7CC1CBBF35100E6859B /* Type.swift in Sources */,
 				29BAB7DE1CBC367A00E6859B /* Nature.swift in Sources */,
+				290C95681CBC7C4E002F6264 /* BuilderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

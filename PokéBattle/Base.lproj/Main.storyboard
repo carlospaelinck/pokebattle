@@ -163,17 +163,18 @@
                                     <action selector="dismissController:" target="Jt0-lX-JAY" id="m8g-WH-BLY"/>
                                 </connections>
                             </button>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAi-IY-GUc">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="72" horizontalPageScroll="10" verticalLineScroll="72" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAi-IY-GUc">
                                 <rect key="frame" x="0.0" y="58" width="715" height="385"/>
-                                <clipView key="contentView" id="vr8-dh-uHh">
+                                <clipView key="contentView" drawsBackground="NO" id="vr8-dh-uHh">
                                     <rect key="frame" x="1" y="0.0" width="713" height="384"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" headerView="pNT-QG-3CV" id="O2y-vR-GqY">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="70" headerView="pNT-QG-3CV" viewBased="YES" id="O2y-vR-GqY">
                                             <rect key="frame" x="0.0" y="0.0" width="713" height="367"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn width="710" minWidth="40" maxWidth="1000" id="ipP-zH-kIa">
@@ -182,12 +183,43 @@
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
-                                                    <comboBoxCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" buttonBordered="NO" completes="NO" usesDataSource="YES" numberOfVisibleItems="5" id="dGe-L5-ueo">
+                                                    <comboBoxCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" completes="NO" usesDataSource="YES" numberOfVisibleItems="5" id="dGe-L5-ueo">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </comboBoxCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView identifier="BuilderTableViewCell" id="T1S-Q1-UWy" customClass="BuilderTableViewCell" customModule="Poke_Battle" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="710" height="70"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jay-Z0-rgR">
+                                                                    <rect key="frame" x="3" y="3" width="63" height="64"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="64" id="31b-u9-eLA"/>
+                                                                        <constraint firstAttribute="width" constant="63" id="w2S-Y1-GQD"/>
+                                                                    </constraints>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="rb1-bs-0on"/>
+                                                                </imageView>
+                                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zis-tf-354">
+                                                                    <rect key="frame" x="74" y="34" width="172" height="27"/>
+                                                                    <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mLK-7a-XRW">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <menu key="menu" id="sSW-HY-Z5a"/>
+                                                                    </popUpButtonCell>
+                                                                    <connections>
+                                                                        <action selector="pokémonPopUpButtonSelected:" target="Jt0-lX-JAY" id="al1-GH-rIL"/>
+                                                                    </connections>
+                                                                </popUpButton>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="jay-Z0-rgR" firstAttribute="leading" secondItem="T1S-Q1-UWy" secondAttribute="leading" constant="3" id="FqD-eg-mS8"/>
+                                                                <constraint firstItem="jay-Z0-rgR" firstAttribute="top" secondItem="T1S-Q1-UWy" secondAttribute="top" constant="3" id="wxb-wy-bfq"/>
+                                                            </constraints>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
@@ -196,7 +228,7 @@
                                             </connections>
                                         </tableView>
                                     </subviews>
-                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <nil key="backgroundColor"/>
                                 </clipView>
                                 <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ZMc-s8-UnH">

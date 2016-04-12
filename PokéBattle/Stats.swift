@@ -29,3 +29,16 @@ internal var StatsZero: Stats {
         )
     }
 }
+
+internal var PerfectIVsStats: Stats {
+    get {
+        return Stats(
+            hitPoints: 31,
+            attack: 31,
+            defense: 31,
+            specialAttack: 31,
+            specialDefense: 31,
+            speed: 31
+        )
+    }
+}
