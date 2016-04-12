@@ -9,12 +9,12 @@
 import Foundation
 
 struct Stats {
-    let hitPoints: Int
-    let attack: Int
-    let defense: Int
-    let specialAttack: Int
-    let specialDefense: Int
-    let speed: Int
+    var hitPoints: Int
+    var attack: Int
+    var defense: Int
+    var specialAttack: Int
+    var specialDefense: Int
+    var speed: Int
 }
 
 internal var StatsZero: Stats {
