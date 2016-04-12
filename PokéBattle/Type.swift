@@ -8,23 +8,33 @@
 
 import Foundation
 
-enum PokémonType: Int {
-    case Bug = 1
-    case Dark
-    case Dragon
-    case Electric
-    case Fairy
-    case Fighting
-    case Fire
-    case Flying
-    case Ghost
-    case Grass
-    case Ground
-    case Ice
-    case Normal
-    case Poison
-    case Psychic
-    case Rock
-    case Steel
-    case Water
+enum PokémonType: String {
+    case Bug = "Bug"
+    case Dark = "Dark"
+    case Dragon = "Dragon"
+    case Electric = "Electric"
+    case Fairy = "Fairy"
+    case Fighting = "Fighting"
+    case Fire = "Fire"
+    case Flying = "Flying"
+    case Ghost = "Ghost"
+    case Grass = "Grass"
+    case Ground = "Ground"
+    case Ice = "Ice"
+    case Normal = "Normal"
+    case Poison = "Poison"
+    case Psychic = "Psychic"
+    case Rock = "Rock"
+    case Steel = "Steel"
+    case Water = "Water"
+}
+
+internal var AllPokémonTypes: [PokémonType] {
+    get {
+        return [
+            .Bug, .Dark, .Dragon, .Electric, .Fairy, .Fighting,
+            .Fire, .Flying, .Ghost, .Grass, .Ground, .Ice,
+            .Normal, .Poison, .Psychic, .Rock, .Steel, .Water
+        ]
+    }
 }

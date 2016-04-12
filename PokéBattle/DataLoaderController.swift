@@ -25,7 +25,7 @@ class DataLoaderController {
         attackDataObjects?.forEach {
             guard let name = $0["name"] as? String else { return }
             guard let learnset = $0["learnset"] as? [Int] else { return }
-            guard let typeId = $0["type"] as? Int else { return }
+            guard let typeId = $0["type"] as? String else { return }
             guard let categoryId = $0["category"] as? Int else { return }
             guard let basePower = $0["basePower"] as? Int else { return }
             
@@ -49,10 +49,12 @@ class DataLoaderController {
         guard let pokémonData = NSData(contentsOfFile: pokémonDataPath) else { return }
         guard let pokémonObjects = try? NSJSONSerialization.JSONObjectWithData(pokémonData, options: NSJSONReadingOptions(rawValue: 0)) as? [[String: AnyObject]] else { return }
         
+        var allPokémon: [Pokémon] = []
+        
         pokémonObjects?.forEach {
             guard let id = $0["id"] as? Int else { return }
             guard let name = $0["name"] as? String else { return }
-            guard let typeIds = $0["types"] as? [Int] else { return }
+            guard let typeIds = $0["types"] as? [String] else { return }
             guard let statsRaw = $0["stats"] as? [Int] else { return }
             
             var types: [PokémonType] = []
@@ -73,7 +75,9 @@ class DataLoaderController {
             )
             
             let pokémon = Pokémon(id: id, name: name, types: types, stats: stats)
-            self.pokémon.append(pokémon)
+            allPokémon.append(pokémon)
         }
+        
+        pokémon = allPokémon.sort { $0.0.id < $0.1.id }
     }
 }

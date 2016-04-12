@@ -2,63 +2,63 @@
   {
     "name" : "Meteor Mash",
     "learnset" : [ 36, 376 ],
-    "type" : 17,
+    "type" : "Steel",
     "basePower" : 90,
     "category" : 2
   },
   {
     "name" : "Surf",
     "learnset" : [ 658 ],
-    "type" : 18,
+    "type" : "Water",
     "basePower" : 90,
     "category" : 1
   },
   {
     "name" : "Flamethrower",
     "learnset" : [ 36, 609 ],
-    "type" : 7,
+    "type" : "Fire",
     "basePower" : 90,
     "category" : 1
   },
   {
     "name" : "Shadow Ball",
     "learnset" : [ 36, 376, 609 ],
-    "type" : 9,
+    "type" : "Ghost",
     "basePower" : 80,
     "category" : 1
   },
   {
     "name" : "Ice Beam",
     "learnset" : [ 36, 658 ],
-    "type" : 12,
+    "type" : "Ice",
     "basePower" : 90,
     "category" : 1
   },
   {
     "name" : "Zen Headbutt",
     "learnset" : [ 36, 376 ],
-    "type" : 15,
+    "type" : "Psychic",
     "basePower" : 80,
     "category" : 2
   },
   {
     "name" : "Psychic",
     "learnset" : [ 36, 376, 609 ],
-    "type" : 15,
+    "type" : "Psychic",
     "basePower" : 90,
     "category" : 1
   },
   {
     "name" : "Dark Pulse",
     "learnset" : [ 609, 658 ],
-    "type" : 2,
+    "type" : "Dark",
     "basePower" : 80,
     "category" : 1
   },
   {
     "name" : "Hammer Arm",
     "learnset" : [ 376 ],
-    "type" : 6,
+    "type" : "Fighting",
     "basePower" : 100,
     "category" : 2
   }
