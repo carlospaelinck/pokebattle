@@ -366,6 +366,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="savePokémonTeam:" target="Jt0-lX-JAY" id="OJP-MP-6ZO"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tpk-WR-pqs">
                                 <rect key="frame" x="507" y="13" width="124" height="32"/>

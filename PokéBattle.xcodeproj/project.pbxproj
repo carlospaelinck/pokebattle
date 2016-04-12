@@ -26,6 +26,7 @@
 		29BAB7E51CBC459900E6859B /* pokémonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 29BAB7E41CBC459900E6859B /* pokémonData.json */; };
 		29BAB7E71CBC46D500E6859B /* pokémonAttacks.json in Resources */ = {isa = PBXBuildFile; fileRef = 29BAB7E61CBC46D500E6859B /* pokémonAttacks.json */; };
 		29BAB7E91CBC486D00E6859B /* DataLoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB7E81CBC486D00E6859B /* DataLoaderController.swift */; };
+		29BAB7EB1CBD718A00E6859B /* TeamArchiverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB7EA1CBD718A00E6859B /* TeamArchiverController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		29BAB7E41CBC459900E6859B /* pokémonData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokémonData.json"; sourceTree = "<group>"; };
 		29BAB7E61CBC46D500E6859B /* pokémonAttacks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokémonAttacks.json"; sourceTree = "<group>"; };
 		29BAB7E81CBC486D00E6859B /* DataLoaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoaderController.swift; sourceTree = "<group>"; };
+		29BAB7EA1CBD718A00E6859B /* TeamArchiverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamArchiverController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				29BAB7D31CBBF65100E6859B /* BattleController.swift */,
 				29BAB7E81CBC486D00E6859B /* DataLoaderController.swift */,
+				29BAB7EA1CBD718A00E6859B /* TeamArchiverController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				290C95651CBC6983002F6264 /* TeamBuilderViewController.swift in Sources */,
 				29BAB7E91CBC486D00E6859B /* DataLoaderController.swift in Sources */,
 				29BAB7D11CBBF4F600E6859B /* Pokémon+Constructors.swift in Sources */,
+				29BAB7EB1CBD718A00E6859B /* TeamArchiverController.swift in Sources */,
 				29BAB7DA1CBC181800E6859B /* Attack.swift in Sources */,
 				29BAB7D81CBC083300E6859B /* PokémonInstance.swift in Sources */,
 				29BAB7CE1CBBF43000E6859B /* Stats.swift in Sources */,

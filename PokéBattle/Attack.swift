@@ -12,10 +12,18 @@ enum AttackCategory: Int {
     case Special = 1, Physical, Status
 }
 
-struct Attack {
+class Attack {
     let name: String
     let basePower: Int
     let type: PokémonType
     let category: AttackCategory
     let learnset: [Int]
+
+    init(name: String, basePower: Int, type: PokémonType, category: AttackCategory, learnset: [Int]) {
+        self.name = name
+        self.basePower = basePower
+        self.type = type
+        self.category = category
+        self.learnset = learnset
+    }
 }

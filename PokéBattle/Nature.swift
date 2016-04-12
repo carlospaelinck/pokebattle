@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum Nature {
+enum Nature: Int {
     // No change in stats
-    case Hardy, Docile, Serious, Bashful, Quirky
+    case Hardy = 0, Docile, Serious, Bashful, Quirky
 
     // Increase in Attack
     case Lonely, Brave, Adamant, Naughty

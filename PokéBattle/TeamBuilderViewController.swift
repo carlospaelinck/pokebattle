@@ -20,13 +20,17 @@ class TeamBuilderViewController: NSViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         pokémonNames = dataLoaderController.pokémon.map { $0.name }
+
+        if let possibleTeam = TeamArchiverController.unarchiveTeam() {
+            team = possibleTeam
+        }
     }
     
     @IBAction func addPokémonToTeam(sender: NSButton) {
         guard let firstPokémon = dataLoaderController.pokémon.first else { return }
         
         let pokémonInstance = PokémonInstance(
-            basePokemon: firstPokémon,
+            basePokémon: firstPokémon,
             level: 50,
             nature: .Serious,
             IVs: StatsZero,
@@ -37,12 +41,16 @@ class TeamBuilderViewController: NSViewController,
         team.pokémon.append(pokémonInstance)
         tableView.reloadData()
     }
+
+    @IBAction func savePokémonTeam(_: NSButton) {
+        TeamArchiverController.archiveTeam(team)
+    }
     
     @IBAction func pokémonPopUpButtonSelected(sender: NSPopUpButton) {
         let containerView = sender.superview!
         let row = tableView.rowForView(containerView)
         let selectedPokémonIdx = sender.indexOfSelectedItem
-        team.pokémon[row].basePokemon = dataLoaderController.pokémon[selectedPokémonIdx]
+        team.pokémon[row].basePokémon = dataLoaderController.pokémon[selectedPokémonIdx]
         tableView.reloadData()
     }
 
@@ -75,7 +83,7 @@ class TeamBuilderViewController: NSViewController,
         
         let result = tableView.makeViewWithIdentifier("BuilderTableViewCell", owner: self) as? BuilderTableViewCell
         let pokémonInstance = team.pokémon[row]
-        let basePokémon = pokémonInstance.basePokemon
+        let basePokémon = pokémonInstance.basePokémon
         
         guard let pokémonPopUpButton = result?.viewWithTag(1) as? NSPopUpButton else { return nil }
         pokémonPopUpButton.addItemsWithTitles(pokémonNames)
