@@ -22,6 +22,8 @@ class DataLoaderController {
         guard let attackData = NSData(contentsOfFile: attackDataPath) else { return }
         guard let attackDataObjects = try? NSJSONSerialization.JSONObjectWithData(attackData, options: NSJSONReadingOptions(rawValue: 0)) as? [[String: AnyObject]] else { return }
         
+        var allAttacks: [Attack] = []
+        
         attackDataObjects?.forEach {
             guard let name = $0["name"] as? String else { return }
             guard let learnset = $0["learnset"] as? [Int] else { return }
@@ -40,8 +42,10 @@ class DataLoaderController {
                 learnset: learnset
             )
             
-            attacks.append(attack)
+            allAttacks.append(attack)
         }
+        
+        attacks = allAttacks.sort { $0.0.name < $0.1.name }
     }
     
     func loadPokémonData() {
