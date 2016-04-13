@@ -33,9 +33,9 @@ class TeamBuilderViewController: NSViewController,
             basePokémon: firstPokémon,
             level: 50,
             nature: .Serious,
-            IVs: StatsZero,
+            IVs: PerfectIVsStats,
             EVs: StatsZero,
-            attacks: []
+            attacks: [ EmptyAttack, EmptyAttack, EmptyAttack, EmptyAttack ]
         )
         
         team.pokémon.append(pokémonInstance)
@@ -51,6 +51,21 @@ class TeamBuilderViewController: NSViewController,
         let row = tableView.rowForView(containerView)
         let selectedPokémonIdx = sender.indexOfSelectedItem
         team.pokémon[row].basePokémon = dataLoaderController.pokémon[selectedPokémonIdx]
+        team.pokémon[row].attacks = [ EmptyAttack, EmptyAttack, EmptyAttack, EmptyAttack ]
+        tableView.reloadData()
+    }
+
+    @IBAction func attackPopUpButtonSelected(sender: NSPopUpButton) {
+        let containerView = sender.superview!
+        let row = tableView.rowForView(containerView)
+        let selectedAttackName = sender.titleOfSelectedItem!
+        let indexOfAttack = sender.tag - 20
+
+        let selectedAttack = dataLoaderController.attacks
+            .filter { $0.name == selectedAttackName }
+            .first!
+
+        team.pokémon[row].attacks[indexOfAttack] = selectedAttack
         tableView.reloadData()
     }
 
@@ -84,8 +99,13 @@ class TeamBuilderViewController: NSViewController,
         let result = tableView.makeViewWithIdentifier("BuilderTableViewCell", owner: self) as? BuilderTableViewCell
         let pokémonInstance = team.pokémon[row]
         let basePokémon = pokémonInstance.basePokémon
-        
+
+        let availableAttacks = dataLoaderController.attacks
+            .filter { $0.learnset.contains(basePokémon.id) }
+            .map { $0.name }
+
         guard let pokémonPopUpButton = result?.viewWithTag(1) as? NSPopUpButton else { return nil }
+        pokémonPopUpButton.removeAllItems()
         pokémonPopUpButton.addItemsWithTitles(pokémonNames)
         pokémonPopUpButton.selectItemWithTitle(basePokémon.name)
 
@@ -110,7 +130,31 @@ class TeamBuilderViewController: NSViewController,
 
         guard let speEVTextField = result?.viewWithTag(15) as? NSTextField else { return nil }
         speEVTextField.stringValue = String(pokémonInstance.EVs.speed)
-        
+
+        guard let attackOnePopUpButton = result?.viewWithTag(20) as? NSPopUpButton else { return nil }
+        let selectedAttackOne = pokémonInstance.attacks[safe: 0]?.name ?? ""
+        attackOnePopUpButton.removeAllItems()
+        attackOnePopUpButton.addItemsWithTitles(["—"] + availableAttacks)
+        attackOnePopUpButton.selectItemWithTitle(selectedAttackOne)
+
+        guard let attackTwoPopUpButton = result?.viewWithTag(21) as? NSPopUpButton else { return nil }
+        let selectedAttackTwo = pokémonInstance.attacks[safe: 1]?.name ?? ""
+        attackTwoPopUpButton.removeAllItems()
+        attackTwoPopUpButton.addItemsWithTitles(["—"] + availableAttacks)
+        attackTwoPopUpButton.selectItemWithTitle(selectedAttackTwo)
+
+        guard let attackThreePopUpButton = result?.viewWithTag(22) as? NSPopUpButton else { return nil }
+        let selectedAttackThree = pokémonInstance.attacks[safe: 2]?.name ?? ""
+        attackThreePopUpButton.removeAllItems()
+        attackThreePopUpButton.addItemsWithTitles(["—"] + availableAttacks)
+        attackThreePopUpButton.selectItemWithTitle(selectedAttackThree)
+
+        guard let attackFourPopUpButton = result?.viewWithTag(23) as? NSPopUpButton else { return nil }
+        let selectedAttackFour = pokémonInstance.attacks[safe: 3]?.name ?? ""
+        attackFourPopUpButton.removeAllItems()
+        attackFourPopUpButton.addItemsWithTitles(["—"] + availableAttacks)
+        attackFourPopUpButton.selectItemWithTitle(selectedAttackFour)
+
         return result
     }
 }

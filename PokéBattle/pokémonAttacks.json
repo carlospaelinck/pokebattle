@@ -35,6 +35,13 @@
     "category" : 1
   },
   {
+    "name" : "Moonblast",
+    "learnset" : [ 36 ],
+    "type" : "Fairy",
+    "basePower" : 95,
+    "category" : 1
+  },
+  {
     "name" : "Zen Headbutt",
     "learnset" : [ 36, 376 ],
     "type" : "Psychic",

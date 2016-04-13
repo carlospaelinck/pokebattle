@@ -27,6 +27,7 @@ enum PokémonType: String {
     case Rock = "Rock"
     case Steel = "Steel"
     case Water = "Water"
+    case None = "None"
 }
 
 internal var AllPokémonTypes: [PokémonType] {

@@ -27,6 +27,7 @@
 		29BAB7E71CBC46D500E6859B /* pokémonAttacks.json in Resources */ = {isa = PBXBuildFile; fileRef = 29BAB7E61CBC46D500E6859B /* pokémonAttacks.json */; };
 		29BAB7E91CBC486D00E6859B /* DataLoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB7E81CBC486D00E6859B /* DataLoaderController.swift */; };
 		29BAB7EB1CBD718A00E6859B /* TeamArchiverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB7EA1CBD718A00E6859B /* TeamArchiverController.swift */; };
+		29BAB7ED1CBE7AAD00E6859B /* SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB7EC1CBE7AAD00E6859B /* SafeIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		29BAB7E61CBC46D500E6859B /* pokémonAttacks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokémonAttacks.json"; sourceTree = "<group>"; };
 		29BAB7E81CBC486D00E6859B /* DataLoaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoaderController.swift; sourceTree = "<group>"; };
 		29BAB7EA1CBD718A00E6859B /* TeamArchiverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamArchiverController.swift; sourceTree = "<group>"; };
+		29BAB7EC1CBE7AAD00E6859B /* SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeIndex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				29BAB7D01CBBF4F600E6859B /* Pokémon+Constructors.swift */,
 				29BAB7D51CBBF66700E6859B /* Type+TypeChart.swift */,
+				29BAB7EC1CBE7AAD00E6859B /* SafeIndex.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29BAB7D61CBBF66700E6859B /* Type+TypeChart.swift in Sources */,
+				29BAB7ED1CBE7AAD00E6859B /* SafeIndex.swift in Sources */,
 				29BAB7BC1CBBF1E700E6859B /* MainViewController.swift in Sources */,
 				290C95621CBC635B002F6264 /* Team.swift in Sources */,
 				290C95651CBC6983002F6264 /* TeamBuilderViewController.swift in Sources */,
